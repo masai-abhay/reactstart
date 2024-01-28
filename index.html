@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>React Counter App</title>
+
+  </head>
+
+  <body>
+
+    <div id="root"></div>
+
+  </body>
+
+  <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+
+    // Code goes here
+    const { useState } = React;
+
+function CounterApp() {
+ 
+  const [count, setCount] = useState(0);
+
+  // Implement an onClick handler  button to update the count
+  const handleIncrement = () => {
+    setCount(count + 1);
+  };
+
+  //Render a button and display the count next to it
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={handleIncrement}>Increment</button>
+    </div>
+  );
+}
+
+// the root div
+ReactDOM.render(<CounterApp />, document.getElementById('root'));
+
+
+  </script>
+
+</html>
+
